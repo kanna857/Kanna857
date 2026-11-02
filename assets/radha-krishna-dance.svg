@@ -1,0 +1,287 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="rkBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#05091C"/>
+      <stop offset="60%" stop-color="#0b1335"/>
+      <stop offset="100%" stop-color="#141c45"/>
+    </linearGradient>
+
+    <!-- Divine Aura Radial Gradient -->
+    <radialGradient id="divineAura" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#FFE89E" stop-opacity="0.35"/>
+      <stop offset="40%" stop-color="#F5A3C7" stop-opacity="0.2"/>
+      <stop offset="70%" stop-color="#A78BFA" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#05091C" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Krishna Gradient -->
+    <linearGradient id="krishnaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4F8DF5"/>
+      <stop offset="50%" stop-color="#1E4FA8"/>
+      <stop offset="100%" stop-color="#0F2C69"/>
+    </linearGradient>
+
+    <!-- Radha Gradient -->
+    <linearGradient id="radhaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFAACD"/>
+      <stop offset="45%" stop-color="#F576A8"/>
+      <stop offset="100%" stop-color="#B23E75"/>
+    </linearGradient>
+
+    <!-- Sacred Gold Gradient -->
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFEBB3"/>
+      <stop offset="50%" stop-color="#F5C76B"/>
+      <stop offset="100%" stop-color="#D49924"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="moonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .star { animation: twinkle 3s ease-in-out infinite alternate; }
+    .star-d1 { animation-delay: 0.8s; }
+    .star-d2 { animation-delay: 1.6s; }
+    .star-d3 { animation-delay: 2.3s; }
+    
+    .aura-pulse { animation: auraGlow 5s ease-in-out infinite alternate; }
+    .petal-fall1 { animation: petalDrift1 12s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    .petal-fall2 { animation: petalDrift2 15s cubic-bezier(0.4, 0, 0.6, 1) infinite 4s; }
+    .petal-fall3 { animation: petalDrift3 11s cubic-bezier(0.4, 0, 0.6, 1) infinite 7s; }
+    .petal-fall4 { animation: petalDrift1 14s cubic-bezier(0.4, 0, 0.6, 1) infinite 2s; }
+    
+    .garland-shimmer { animation: shimmer 4s ease-in-out infinite alternate; }
+    .border-glow { animation: borderPulse 4s ease-in-out infinite alternate; }
+    .mandap-light { animation: mandapGlow 6s ease-in-out infinite alternate; }
+    .radha-sway { animation: gentleSway 6s ease-in-out infinite alternate; transform-origin: 235px 320px; }
+    .krishna-sway { animation: gentleSwayK 6s ease-in-out infinite alternate; transform-origin: 165px 320px; }
+
+    @keyframes twinkle {
+      0% { opacity: 0.2; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1.2); }
+    }
+    @keyframes auraGlow {
+      0% { transform: scale(0.95); opacity: 0.7; }
+      100% { transform: scale(1.06); opacity: 1; }
+    }
+    @keyframes petalDrift1 {
+      0% { transform: translate(30px, -20px) rotate(0deg); opacity: 0; }
+      15% { opacity: 0.9; }
+      85% { opacity: 0.9; }
+      100% { transform: translate(-40px, 420px) rotate(260deg); opacity: 0; }
+    }
+    @keyframes petalDrift2 {
+      0% { transform: translate(120px, -20px) rotate(45deg); opacity: 0; }
+      20% { opacity: 0.85; }
+      80% { opacity: 0.85; }
+      100% { transform: translate(40px, 420px) rotate(320deg); opacity: 0; }
+    }
+    @keyframes petalDrift3 {
+      0% { transform: translate(250px, -20px) rotate(-20deg); opacity: 0; }
+      20% { opacity: 0.9; }
+      85% { opacity: 0.9; }
+      100% { transform: translate(190px, 420px) rotate(210deg); opacity: 0; }
+    }
+    @keyframes shimmer {
+      0% { opacity: 0.6; }
+      100% { opacity: 1; filter: drop-shadow(0 0 4px #F5C76B); }
+    }
+    @keyframes borderPulse {
+      0% { stroke-opacity: 0.6; }
+      100% { stroke-opacity: 1; filter: drop-shadow(0 0 5px #F5C76B); }
+    }
+    @keyframes mandapGlow {
+      0% { opacity: 0.7; }
+      100% { opacity: 1; }
+    }
+    @keyframes gentleSway {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(1.2deg); }
+    }
+    @keyframes gentleSwayK {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-1.2deg); }
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="400" height="400" rx="20" fill="url(#rkBg)"/>
+
+  <!-- Stars in the Cosmic Vrindavan Sky -->
+  <g fill="#FFF8DC">
+    <circle class="star" cx="45" cy="50" r="1.5"/>
+    <circle class="star star-d1" cx="80" cy="85" r="1.2"/>
+    <circle class="star star-d2" cx="125" cy="40" r="1.8"/>
+    <circle class="star star-d3" cx="280" cy="55" r="1.4"/>
+    <circle class="star star-d1" cx="330" cy="75" r="2"/>
+    <circle class="star star-d2" cx="360" cy="45" r="1.3"/>
+    <circle class="star" cx="60" cy="140" r="1.5"/>
+    <circle class="star star-d3" cx="340" cy="130" r="1.6"/>
+  </g>
+
+  <!-- Sacred Full Moon -->
+  <circle cx="200" cy="85" r="42" fill="#FFFBE6" filter="url(#moonGlow)" opacity="0.95"/>
+  <circle cx="200" cy="85" r="50" fill="none" stroke="#FFE79A" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Divine Aura behind Radha Krishna -->
+  <ellipse class="aura-pulse" cx="200" cy="180" rx="140" ry="120" fill="url(#divineAura)"/>
+
+  <!-- Vrindavan Mandap Arch Frame (Temple Architecture) -->
+  <g class="mandap-light" stroke="url(#gold)" fill="none" stroke-width="1.6" opacity="0.85">
+    <!-- Outer Arch -->
+    <path d="M 50 370 L 50 140 Q 50 45 200 45 Q 350 45 350 140 L 350 370"/>
+    <!-- Inner Delicate Arch -->
+    <path d="M 62 370 L 62 145 Q 62 60 200 60 Q 338 60 338 145 L 338 370" stroke-dasharray="3 3"/>
+    <!-- Arch Crest Kalash -->
+    <path d="M 200 32 L 204 42 L 196 42 Z" fill="#F5C76B"/>
+    <circle cx="200" cy="30" r="3" fill="#FFE89E"/>
+    <!-- Pillar Details -->
+    <rect x="44" y="220" width="12" height="6" rx="2" fill="#F5C76B"/>
+    <rect x="344" y="220" width="12" height="6" rx="2" fill="#F5C76B"/>
+  </g>
+
+  <!-- Ground / Lotus Pedestal -->
+  <ellipse cx="200" cy="360" rx="150" ry="24" fill="#0C1438"/>
+  <ellipse cx="200" cy="362" rx="140" ry="18" fill="none" stroke="url(#gold)" stroke-width="1" opacity="0.5"/>
+
+  <!-- ================= KRISHNA SILHOUETTE ================= -->
+  <g class="krishna-sway">
+    <!-- Divine Blue Halo behind Krishna -->
+    <circle cx="168" cy="148" r="28" fill="#173A78" opacity="0.6"/>
+    <circle cx="168" cy="148" r="27" fill="none" stroke="#00D9C6" stroke-width="1" opacity="0.5"/>
+
+    <!-- Krishna Body / Attire Silhouette -->
+    <!-- Head & Tilak -->
+    <circle cx="168" cy="150" r="14" fill="url(#krishnaGrad)"/>
+    
+    <!-- Peacock Feather on Crown (Mor Pankh) -->
+    <g transform="translate(166, 126)">
+      <path d="M 0 10 Q -8 -2 -4 -12 Q 0 -18 6 -12 Q 8 -2 0 10 Z" fill="#00D9C6" filter="url(#softGlow)"/>
+      <ellipse cx="1" cy="-8" rx="3.5" ry="5" fill="#173A78"/>
+      <circle cx="1" cy="-8" r="2" fill="#F5C76B"/>
+      <!-- Stem -->
+      <path d="M 0 10 Q -2 18 -1 24" stroke="#D49924" stroke-width="1.2" fill="none"/>
+    </g>
+
+    <!-- Torso and Royal Garments (Dhoti & Angavastram) -->
+    <path d="M 154 164 Q 168 160 182 164 L 186 230 Q 168 238 150 230 Z" fill="url(#krishnaGrad)"/>
+    <path d="M 150 230 Q 140 280 148 340 Q 168 345 186 340 Q 192 280 186 230 Z" fill="#132B5E"/>
+    
+    <!-- Golden Dhoti Pleats & Pitambara Accent -->
+    <path d="M 166 232 L 166 338" stroke="url(#gold)" stroke-width="2"/>
+    <path d="M 156 240 Q 168 260 160 330" stroke="url(#gold)" stroke-width="1" stroke-dasharray="2 3"/>
+    <path d="M 176 240 Q 168 260 174 330" stroke="url(#gold)" stroke-width="1" stroke-dasharray="2 3"/>
+
+    <!-- Left Arm Holding Bansuri Flute -->
+    <path d="M 154 172 Q 136 186 142 202 Q 152 204 164 190" stroke="url(#krishnaGrad)" stroke-width="7" stroke-linecap="round" fill="none"/>
+    
+    <!-- Right Arm Supporting Flute near Radha -->
+    <path d="M 180 172 Q 200 180 196 195 Q 186 198 172 190" stroke="url(#krishnaGrad)" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Golden Bansuri (Flute) -->
+    <g filter="url(#softGlow)">
+      <line x1="126" y1="188" x2="216" y2="182" stroke="url(#gold)" stroke-width="3.5" stroke-linecap="round"/>
+      <!-- Flute Tassels / Pearls -->
+      <circle cx="127" cy="188" r="2.5" fill="#FFEBB3"/>
+      <path d="M 127 190 Q 124 198 127 206" stroke="#F5C76B" stroke-width="1.2" fill="none"/>
+      <circle cx="127" cy="207" r="1.8" fill="#F5A3C7"/>
+    </g>
+
+    <!-- Garland (Vanamala) -->
+    <path class="garland-shimmer" d="M 157 168 Q 168 220 178 168" stroke="url(#gold)" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 3" fill="none"/>
+  </g>
+
+  <!-- ================= RADHA SILHOUETTE ================= -->
+  <g class="radha-sway">
+    <!-- Divine Pink/Gold Halo behind Radha -->
+    <circle cx="232" cy="154" r="26" fill="#F5A3C7" opacity="0.3"/>
+    <circle cx="232" cy="154" r="25" fill="none" stroke="#F5A3C7" stroke-width="1" opacity="0.5"/>
+
+    <!-- Radha Head & Veiled Odhani -->
+    <circle cx="232" cy="155" r="13" fill="url(#radhaGrad)"/>
+    
+    <!-- Graceful Veil (Odhani / Dupatta) flowing gracefully -->
+    <path d="M 226 143 Q 235 138 245 143 Q 256 160 252 210 Q 258 270 252 335 L 242 335 Q 244 260 238 200 Z" fill="#D65D8E" opacity="0.85"/>
+    <!-- Veil Border Gold Trim -->
+    <path d="M 226 143 Q 235 138 245 143 Q 256 160 252 210 Q 258 270 252 335" stroke="url(#gold)" stroke-width="1.5" fill="none"/>
+
+    <!-- Radha Bodice & Lehengha Dress -->
+    <path d="M 222 168 Q 232 166 242 168 L 244 225 Q 232 230 220 225 Z" fill="url(#radhaGrad)"/>
+    <!-- Graceful Flared Lehengha -->
+    <path d="M 220 225 Q 198 285 204 340 Q 236 346 266 340 Q 258 285 244 225 Z" fill="#9C2D63"/>
+
+    <!-- Lehengha Golden Borders & Zari Work -->
+    <path d="M 205 334 Q 235 342 265 334" stroke="url(#gold)" stroke-width="2.5" fill="none"/>
+    <path d="M 209 324 Q 235 331 261 324" stroke="url(#gold)" stroke-width="1.2" stroke-dasharray="3 2" fill="none"/>
+    <path d="M 215 235 Q 230 290 226 330" stroke="url(#gold)" stroke-width="1" stroke-dasharray="2 3" fill="none"/>
+    <path d="M 235 235 Q 242 290 248 330" stroke="url(#gold)" stroke-width="1" stroke-dasharray="2 3" fill="none"/>
+
+    <!-- Arms - Graceful Devotional Mudra towards Krishna -->
+    <!-- Left Hand gracefully resting or offering lotus -->
+    <path d="M 222 174 Q 210 190 214 206 Q 220 208 226 195" stroke="url(#radhaGrad)" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <!-- Right Arm along the waist/veil -->
+    <path d="M 242 174 Q 250 195 246 215" stroke="url(#radhaGrad)" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+    <!-- Small Golden Lotus offered in hand -->
+    <circle cx="213" cy="207" r="3" fill="#F5C76B"/>
+    <path d="M 211 205 Q 213 200 215 205 Z" fill="#F5A3C7"/>
+  </g>
+
+  <!-- ================= FLOATING LOTUS PETALS ================= -->
+  <g fill="#F5A3C7" opacity="0.85">
+    <path class="petal-fall1" d="M 0 0 C 4 -6 12 -6 14 0 C 12 8 4 8 0 0 Z"/>
+    <path class="petal-fall2" d="M 0 0 C 5 -7 14 -7 16 0 C 14 9 5 9 0 0 Z"/>
+    <path class="petal-fall3" d="M 0 0 C 3 -5 10 -5 12 0 C 10 7 3 7 0 0 Z"/>
+    <path class="petal-fall4" d="M 0 0 C 4 -6 11 -6 13 0 C 11 8 4 8 0 0 Z"/>
+  </g>
+
+  <!-- Vrindavan Lotus Blossoms at the Base -->
+  <g transform="translate(100, 345)" filter="url(#softGlow)">
+    <!-- Left Lotus -->
+    <ellipse cx="0" cy="5" rx="14" ry="4" fill="#0F4A3E"/>
+    <path d="M -10 5 C -12 -5 -4 -12 0 -14 C 4 -12 12 -5 10 5 Z" fill="#F5A3C7"/>
+    <path d="M -6 5 C -8 -2 -2 -8 0 -11 C 2 -8 8 -2 6 5 Z" fill="#FFAACD"/>
+    <circle cx="0" cy="1" r="2" fill="#F5C76B"/>
+  </g>
+
+  <g transform="translate(300, 345)" filter="url(#softGlow)">
+    <!-- Right Lotus -->
+    <ellipse cx="0" cy="5" rx="14" ry="4" fill="#0F4A3E"/>
+    <path d="M -10 5 C -12 -5 -4 -12 0 -14 C 4 -12 12 -5 10 5 Z" fill="#F5A3C7"/>
+    <path d="M -6 5 C -8 -2 -2 -8 0 -11 C 2 -8 8 -2 6 5 Z" fill="#FFAACD"/>
+    <circle cx="0" cy="1" r="2" fill="#F5C76B"/>
+  </g>
+
+  <!-- Center Devotional Inscription -->
+  <text x="200" y="385" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="url(#gold)" filter="url(#softGlow)">
+    ॥ श्री राधा कृष्णाय नमः ॥
+  </text>
+
+  <!-- Elegant Golden Ornamental Frame -->
+  <rect class="border-glow" x="6" y="6" width="388" height="388" rx="16" fill="none" stroke="url(#gold)" stroke-width="1.8"/>
+  <rect x="11" y="11" width="378" height="378" rx="12" fill="none" stroke="#00D9C6" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Corner Lotus Motifs -->
+  <g fill="#F5C76B">
+    <circle cx="16" cy="16" r="3"/>
+    <circle cx="384" cy="16" r="3"/>
+    <circle cx="16" cy="384" r="3"/>
+    <circle cx="384" cy="384" r="3"/>
+  </g>
+</svg>

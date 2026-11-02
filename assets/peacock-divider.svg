@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 80" width="1200" height="80">
+  <defs>
+    <!-- Sacred Gold Gradient -->
+    <linearGradient id="divGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#05091C" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#F5C76B" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#FFEAA8"/>
+      <stop offset="80%" stop-color="#F5C76B" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#05091C" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Peacock Teal Gradient -->
+    <linearGradient id="divTeal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#05091C" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#00D9C6" stop-opacity="0.9"/>
+      <stop offset="65%" stop-color="#00D9C6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#05091C" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="divGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <radialGradient id="featherEye" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="35%" stop-color="#F5C76B"/>
+      <stop offset="60%" stop-color="#173A78"/>
+      <stop offset="85%" stop-color="#00D9C6"/>
+      <stop offset="100%" stop-color="#05091C"/>
+    </radialGradient>
+  </defs>
+
+  <style>
+    .dash-flow {
+      stroke-dasharray: 12 10;
+      animation: flowLeft 4s linear infinite;
+    }
+    .dash-flow-rev {
+      stroke-dasharray: 12 10;
+      animation: flowRight 4s linear infinite;
+    }
+    .eye-pulse {
+      animation: pulseFeather 3.5s ease-in-out infinite alternate;
+      transform-origin: 600px 40px;
+    }
+    .sparkle {
+      animation: twinklePart 2.5s ease-in-out infinite alternate;
+    }
+    .sp1 { animation-delay: 0.5s; }
+    .sp2 { animation-delay: 1.2s; }
+    .sp3 { animation-delay: 1.8s; }
+
+    @keyframes flowLeft {
+      from { stroke-dashoffset: 0; }
+      to { stroke-dashoffset: -44; }
+    }
+    @keyframes flowRight {
+      from { stroke-dashoffset: 0; }
+      to { stroke-dashoffset: 44; }
+    }
+    @keyframes pulseFeather {
+      0% { transform: scale(0.94); filter: drop-shadow(0 0 4px #00D9C6); }
+      100% { transform: scale(1.08); filter: drop-shadow(0 0 10px #F5C76B); }
+    }
+    @keyframes twinklePart {
+      0% { opacity: 0.2; transform: scale(0.7); }
+      100% { opacity: 1; transform: scale(1.3); }
+    }
+  </style>
+
+  <!-- Flowing Golden & Teal Lines -->
+  <!-- Left Side Wing -->
+  <path class="dash-flow" d="M 60 40 L 540 40" stroke="url(#divGold)" stroke-width="2.5" fill="none" filter="url(#divGlow)"/>
+  <path d="M 120 34 L 520 34" stroke="url(#divTeal)" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M 120 46 L 520 46" stroke="url(#divTeal)" stroke-width="1" fill="none" opacity="0.6"/>
+
+  <!-- Right Side Wing -->
+  <path class="dash-flow-rev" d="M 660 40 L 1140 40" stroke="url(#divGold)" stroke-width="2.5" fill="none" filter="url(#divGlow)"/>
+  <path d="M 680 34 L 1080 34" stroke="url(#divTeal)" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M 680 46 L 1080 46" stroke="url(#divTeal)" stroke-width="1" fill="none" opacity="0.6"/>
+
+  <!-- Left Lotus Terminal -->
+  <g transform="translate(60, 40)" filter="url(#divGlow)">
+    <circle cx="0" cy="0" r="3" fill="#F5C76B"/>
+    <path d="M 0 0 C -12 -6 -18 0 0 6 C -18 0 -12 6 0 0 Z" fill="#F5A3C7"/>
+    <path d="M -8 0 C -16 -4 -16 4 -8 0 Z" fill="#F5C76B"/>
+  </g>
+
+  <!-- Right Lotus Terminal -->
+  <g transform="translate(1140, 40)" filter="url(#divGlow)">
+    <circle cx="0" cy="0" r="3" fill="#F5C76B"/>
+    <path d="M 0 0 C 12 -6 18 0 0 6 C 18 0 12 6 0 0 Z" fill="#F5A3C7"/>
+    <path d="M 8 0 C 16 -4 16 4 8 0 Z" fill="#F5C76B"/>
+  </g>
+
+  <!-- Central Flute Silhouette Behind Eye -->
+  <g filter="url(#divGlow)">
+    <line x1="510" y1="40" x2="690" y2="40" stroke="#F5C76B" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="530" cy="40" r="2" fill="#05091C"/>
+    <circle cx="550" cy="40" r="2" fill="#05091C"/>
+    <circle cx="570" cy="40" r="2" fill="#05091C"/>
+    <circle cx="630" cy="40" r="2" fill="#05091C"/>
+    <circle cx="650" cy="40" r="2" fill="#05091C"/>
+    <circle cx="670" cy="40" r="2" fill="#05091C"/>
+  </g>
+
+  <!-- Central Peacock Feather Eye Emblem -->
+  <g class="eye-pulse">
+    <!-- Outer Golden Radiance Ring -->
+    <ellipse cx="600" cy="40" rx="36" ry="24" fill="none" stroke="#F5C76B" stroke-width="1.8" filter="url(#divGlow)"/>
+    <ellipse cx="600" cy="40" rx="30" ry="20" fill="#072033" stroke="#00D9C6" stroke-width="1.2"/>
+    
+    <!-- Peacock Feather Layers -->
+    <ellipse cx="600" cy="40" rx="22" ry="15" fill="#00D9C6"/>
+    <ellipse cx="600" cy="40" rx="15" ry="10" fill="#173A78"/>
+    <ellipse cx="600" cy="40" rx="9" ry="6" fill="#F5C76B"/>
+    <circle cx="600" cy="40" r="3.5" fill="#FFF9DE"/>
+  </g>
+
+  <!-- Twinkling Sparkles Along the Bar -->
+  <g fill="#FFEAA8" filter="url(#divGlow)">
+    <circle class="sparkle" cx="300" cy="28" r="2"/>
+    <circle class="sparkle sp1" cx="450" cy="52" r="2.5"/>
+    <circle class="sparkle sp2" cx="750" cy="28" r="2.5"/>
+    <circle class="sparkle sp3" cx="900" cy="52" r="2"/>
+    <circle class="sparkle sp1" cx="200" cy="50" r="1.8"/>
+    <circle class="sparkle sp2" cx="1000" cy="30" r="1.8"/>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="cropBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#051B14"/>
+      <stop offset="100%" stop-color="#0E382B"/>
+    </linearGradient>
+    <linearGradient id="ndviGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="satGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="100%" stop-color="#F5C76B"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="26" fill="url(#cropBg)" stroke="url(#satGold)" stroke-width="2"/>
+  <!-- Satellite Remote Sensing & NDVI Crop Leaf Health -->
+  <g transform="translate(60, 60)">
+    <!-- Satellite Orbit Ring -->
+    <ellipse cx="0" cy="0" rx="36" ry="14" fill="none" stroke="#34D399" stroke-width="1.2" stroke-dasharray="6 4" transform="rotate(-30)"/>
+    <!-- Satellite Icon in Orbit -->
+    <g transform="translate(-24, -20) rotate(-30)">
+      <rect x="-6" y="-4" width="12" height="8" rx="2" fill="url(#satGold)"/>
+      <line x1="-12" y1="0" x2="-6" y2="0" stroke="#00D9C6" stroke-width="2"/>
+      <line x1="6" y1="0" x2="12" y2="0" stroke="#00D9C6" stroke-width="2"/>
+      <rect x="-14" y="-3" width="3" height="6" fill="#38BDF8"/>
+      <rect x="11" y="-3" width="3" height="6" fill="#38BDF8"/>
+    </g>
+    <!-- Sacred Earth / Crop Leaf (NDVI Health) -->
+    <path d="M 0 24 C -18 12 -22 -14 0 -24 C 22 -14 18 12 0 24 Z" fill="url(#ndviGrad)"/>
+    <path d="M 0 -20 L 0 20" stroke="#FFEAA8" stroke-width="1.5"/>
+    <path d="M 0 -8 L 8 -1" stroke="#FFEAA8" stroke-width="1.2"/>
+    <path d="M 0 4 L -8 11" stroke="#FFEAA8" stroke-width="1.2"/>
+  </g>
+</svg>

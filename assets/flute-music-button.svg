@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 130" width="800" height="130">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="btnBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080D24"/>
+      <stop offset="50%" stop-color="#101738"/>
+      <stop offset="100%" stop-color="#0C122D"/>
+    </linearGradient>
+
+    <!-- Sacred Gold Gradient -->
+    <linearGradient id="btnGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFE89E"/>
+      <stop offset="45%" stop-color="#F5C76B"/>
+      <stop offset="100%" stop-color="#C28919"/>
+    </linearGradient>
+
+    <!-- Peacock Teal Gradient -->
+    <linearGradient id="btnTeal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00D9C6"/>
+      <stop offset="100%" stop-color="#173A78"/>
+    </linearGradient>
+
+    <radialGradient id="btnHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F5C76B" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#00D9C6" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#080D24" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Glow Filter -->
+    <filter id="musicGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="strongGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    /* Halo pulse */
+    .halo-pulse {
+      animation: pulseHalo 4s ease-in-out infinite alternate;
+      transform-origin: 90px 65px;
+    }
+    /* Flute Glow */
+    .flute-glow {
+      animation: fluteShine 3s ease-in-out infinite alternate;
+    }
+    /* Floating Musical Notes */
+    .note1 {
+      animation: floatNote1 5s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
+    }
+    .note2 {
+      animation: floatNote2 6s cubic-bezier(0.2, 0.6, 0.4, 1) infinite 1.8s;
+    }
+    .note3 {
+      animation: floatNote3 5.5s cubic-bezier(0.2, 0.6, 0.4, 1) infinite 3.2s;
+    }
+    /* Play Button Pulse */
+    .play-btn-pulse {
+      animation: playPulse 2.8s ease-in-out infinite alternate;
+      transform-origin: 730px 65px;
+    }
+    /* Floating Lotus Petals */
+    .petal-float {
+      animation: driftPetal 8s ease-in-out infinite alternate;
+    }
+    /* Border Shimmer */
+    .shimmer-border {
+      stroke-dasharray: 20 10;
+      animation: borderDash 8s linear infinite;
+    }
+
+    @keyframes pulseHalo {
+      0% { transform: scale(0.85); opacity: 0.5; }
+      100% { transform: scale(1.15); opacity: 0.95; }
+    }
+    @keyframes fluteShine {
+      0% { filter: drop-shadow(0 0 3px #F5C76B); }
+      100% { filter: drop-shadow(0 0 10px #FFE89E); }
+    }
+    @keyframes floatNote1 {
+      0% { transform: translate(110px, 60px) scale(0.6); opacity: 0; }
+      20% { opacity: 0.95; }
+      80% { opacity: 0.8; }
+      100% { transform: translate(145px, 10px) scale(1.1) rotate(20deg); opacity: 0; }
+    }
+    @keyframes floatNote2 {
+      0% { transform: translate(130px, 65px) scale(0.5); opacity: 0; }
+      25% { opacity: 0.9; }
+      80% { opacity: 0.85; }
+      100% { transform: translate(165px, 15px) scale(1.2) rotate(-15deg); opacity: 0; }
+    }
+    @keyframes floatNote3 {
+      0% { transform: translate(95px, 55px) scale(0.6); opacity: 0; }
+      20% { opacity: 0.9; }
+      80% { opacity: 0.75; }
+      100% { transform: translate(80px, 10px) scale(1.15) rotate(15deg); opacity: 0; }
+    }
+    @keyframes playPulse {
+      0% { transform: scale(0.96); filter: drop-shadow(0 0 4px #00D9C6); }
+      100% { transform: scale(1.06); filter: drop-shadow(0 0 10px #F5C76B); }
+    }
+    @keyframes driftPetal {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      100% { transform: translate(15px, -10px) rotate(25deg); }
+    }
+    @keyframes borderDash {
+      from { stroke-dashoffset: 0; }
+      to { stroke-dashoffset: -120; }
+    }
+  </style>
+
+  <!-- Button Card Container with Glassmorphism Look -->
+  <rect x="6" y="6" width="788" height="118" rx="28" fill="url(#btnBg)"/>
+
+  <!-- Halo around Flute Section -->
+  <ellipse class="halo-pulse" cx="95" cy="65" rx="75" ry="50" fill="url(#btnHalo)"/>
+
+  <!-- Inner Peacock Glow Border -->
+  <rect x="9" y="9" width="782" height="112" rx="25" fill="none" stroke="#A78BFA" stroke-width="1.2" opacity="0.35"/>
+  
+  <!-- Outer Sacred Gold Animated Border -->
+  <rect class="shimmer-border" x="6" y="6" width="788" height="118" rx="28" fill="none" stroke="url(#btnGold)" stroke-width="2.2" filter="url(#musicGlow)"/>
+
+  <!-- ================= BANSURI (FLUTE) ILLUSTRATION ================= -->
+  <g class="flute-glow" transform="translate(35, 62)">
+    <!-- Peacock Feather Crest attached to Flute -->
+    <g transform="translate(18, -18)">
+      <ellipse cx="0" cy="0" rx="9" ry="14" fill="#00D9C6" transform="rotate(-30)"/>
+      <ellipse cx="0" cy="0" rx="6" ry="9" fill="#173A78" transform="rotate(-30)"/>
+      <circle cx="0" cy="0" r="3" fill="#F5C76B"/>
+      <path d="M 0 5 Q 5 15 12 20" stroke="#F5C76B" stroke-width="1.2" fill="none"/>
+    </g>
+
+    <!-- Golden Flute Shaft -->
+    <path d="M 10 0 L 125 0" stroke="url(#btnGold)" stroke-width="6.5" stroke-linecap="round"/>
+    
+    <!-- Flute Tone Holes -->
+    <circle cx="38" cy="0" r="1.8" fill="#080D24"/>
+    <circle cx="52" cy="0" r="1.8" fill="#080D24"/>
+    <circle cx="66" cy="0" r="1.8" fill="#080D24"/>
+    <circle cx="80" cy="0" r="1.8" fill="#080D24"/>
+    <circle cx="94" cy="0" r="1.8" fill="#080D24"/>
+    <circle cx="108" cy="0" r="1.8" fill="#080D24"/>
+
+    <!-- Decorative Flute Thread Bands (Rings) -->
+    <line x1="24" y1="-4" x2="24" y2="4" stroke="#F5A3C7" stroke-width="2"/>
+    <line x1="116" y1="-4" x2="116" y2="4" stroke="#00D9C6" stroke-width="2"/>
+
+    <!-- Flute Hanging Tassels (Ghungroo/Resham Pearls) -->
+    <path d="M 122 0 Q 120 14 125 24" stroke="#F5C76B" stroke-width="1.2" fill="none"/>
+    <circle cx="125" cy="25" r="2.5" fill="#FFE89E"/>
+    <circle cx="125" cy="29" r="1.8" fill="#F5A3C7"/>
+  </g>
+
+  <!-- ================= FLOATING MUSICAL NOTES ================= -->
+  <!-- Note 1 (♪) -->
+  <g class="note1" fill="#FFE89E" filter="url(#musicGlow)">
+    <text font-family="Georgia, serif" font-size="24" font-weight="bold">♪</text>
+  </g>
+  <!-- Note 2 (♫) -->
+  <g class="note2" fill="#F5C76B" filter="url(#musicGlow)">
+    <text font-family="Georgia, serif" font-size="28" font-weight="bold">♫</text>
+  </g>
+  <!-- Note 3 (♬) -->
+  <g class="note3" fill="#00D9C6" filter="url(#musicGlow)">
+    <text font-family="Georgia, serif" font-size="22" font-weight="bold">♬</text>
+  </g>
+
+  <!-- Floating Lotus Petal near Flute -->
+  <g class="petal-float" transform="translate(160, 85)" fill="#F5A3C7" opacity="0.8">
+    <path d="M 0 0 C 4 -6 12 -6 14 0 C 12 7 4 7 0 0 Z"/>
+  </g>
+
+  <!-- ================= BUTTON TEXT ================= -->
+  <g transform="translate(200, 0)">
+    <!-- Devotional Sanskrit Invocation Small -->
+    <text x="0" y="38" font-family="Georgia, serif" font-size="13" font-weight="600" fill="#00D9C6" letter-spacing="1.5">
+      ॥ ॐ श्री कृष्णाय नमः · DIVINE VRINDAVAN BANSURI ॥
+    </text>
+
+    <!-- Main Button Text -->
+    <text x="0" y="73" font-family="Georgia, serif" font-size="27" font-weight="bold" fill="url(#btnGold)" filter="url(#musicGlow)">
+      🪈 Listen to Krishna's Divine Flute
+    </text>
+
+    <!-- Subtitle / Instruction -->
+    <text x="0" y="99" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#A78BFA">
+      Original peaceful bansuri melody • Tap to listen on the portfolio experience
+    </text>
+  </g>
+
+  <!-- ================= PLAY BUTTON ICON (RIGHT) ================= -->
+  <g class="play-btn-pulse" filter="url(#musicGlow)">
+    <!-- Outer Golden Disc -->
+    <circle cx="730" cy="65" r="32" fill="url(#btnGold)"/>
+    <circle cx="730" cy="65" r="28" fill="#0C122D"/>
+    <circle cx="730" cy="65" r="24" fill="url(#btnGold)"/>
+    
+    <!-- Triangle Play Glyph -->
+    <polygon points="724,53 742,65 724,77" fill="#080D24"/>
+  </g>
+
+  <!-- Corner Lotus Dots -->
+  <circle cx="20" cy="20" r="2.5" fill="#F5C76B"/>
+  <circle cx="780" cy="20" r="2.5" fill="#F5C76B"/>
+  <circle cx="20" cy="110" r="2.5" fill="#F5C76B"/>
+  <circle cx="780" cy="110" r="2.5" fill="#F5C76B"/>
+</svg>

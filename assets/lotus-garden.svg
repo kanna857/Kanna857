@@ -1,0 +1,263 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <!-- Background Gradient (Night Waters of Yamuna) -->
+    <linearGradient id="gardenWater" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#05091C"/>
+      <stop offset="40%" stop-color="#0b1738"/>
+      <stop offset="75%" stop-color="#0d2856"/>
+      <stop offset="100%" stop-color="#061a38"/>
+    </linearGradient>
+
+    <!-- Sacred Gold Gradient -->
+    <linearGradient id="lotusGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF3C4"/>
+      <stop offset="50%" stop-color="#F5C76B"/>
+      <stop offset="100%" stop-color="#C28919"/>
+    </linearGradient>
+
+    <!-- Lotus Petal Gradients -->
+    <linearGradient id="petalPink" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#C23672"/>
+      <stop offset="50%" stop-color="#F576A8"/>
+      <stop offset="100%" stop-color="#FFD6E8"/>
+    </linearGradient>
+
+    <linearGradient id="centerLotusPetal" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#D64585"/>
+      <stop offset="60%" stop-color="#FFAACD"/>
+      <stop offset="100%" stop-color="#FFF0F6"/>
+    </linearGradient>
+
+    <!-- Teal Glow for Ripples -->
+    <radialGradient id="waterRippleGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00D9C6" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#173A78" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#05091C" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Soft Glow Filter -->
+    <filter id="lotusGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="subtleGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    /* Flower Opening/Blooming Animations */
+    .lotus-bloom-main { animation: bloomScale 7s ease-in-out infinite alternate; transform-origin: 200px 255px; }
+    .lotus-bloom-left { animation: bloomScaleLeft 8s ease-in-out infinite alternate 1s; transform-origin: 90px 280px; }
+    .lotus-bloom-right { animation: bloomScaleRight 7.5s ease-in-out infinite alternate 2s; transform-origin: 310px 275px; }
+
+    /* Water Ripple Expansions */
+    .ripple1 { animation: rippleExpand 5s ease-out infinite; transform-origin: 200px 260px; }
+    .ripple2 { animation: rippleExpand 5s ease-out infinite 2.5s; transform-origin: 200px 260px; }
+
+    /* Firefly & Golden Particle Floats */
+    .firefly1 { animation: fly1 8s ease-in-out infinite; }
+    .firefly2 { animation: fly2 11s ease-in-out infinite 2s; }
+    .firefly3 { animation: fly3 9s ease-in-out infinite 4s; }
+    .firefly4 { animation: fly1 10s ease-in-out infinite 6s; }
+
+    /* Peacock Feather Sway */
+    .peacock-sway { animation: pSway 5s ease-in-out infinite alternate; transform-origin: 200px 40px; }
+
+    /* Flowing Water Shimmer */
+    .water-wave { animation: waveDrift 6s ease-in-out infinite alternate; }
+
+    @keyframes bloomScale {
+      0% { transform: scale(0.92); }
+      100% { transform: scale(1.08); filter: drop-shadow(0 0 8px #F5A3C7); }
+    }
+    @keyframes bloomScaleLeft {
+      0% { transform: scale(0.90) rotate(-3deg); }
+      100% { transform: scale(1.06) rotate(3deg); }
+    }
+    @keyframes bloomScaleRight {
+      0% { transform: scale(0.91) rotate(2deg); }
+      100% { transform: scale(1.07) rotate(-2deg); }
+    }
+    @keyframes rippleExpand {
+      0% { r: 15; opacity: 0.8; stroke-width: 1.8; }
+      100% { r: 85; opacity: 0; stroke-width: 0.2; }
+    }
+    @keyframes fly1 {
+      0% { transform: translate(0, 0); opacity: 0.2; }
+      50% { transform: translate(25px, -35px); opacity: 1; }
+      100% { transform: translate(-15px, -70px); opacity: 0.1; }
+    }
+    @keyframes fly2 {
+      0% { transform: translate(0, 0); opacity: 0.3; }
+      50% { transform: translate(-30px, -40px); opacity: 0.95; }
+      100% { transform: translate(20px, -80px); opacity: 0.2; }
+    }
+    @keyframes fly3 {
+      0% { transform: translate(0, 0); opacity: 0.1; }
+      50% { transform: translate(20px, -25px); opacity: 1; }
+      100% { transform: translate(35px, -55px); opacity: 0; }
+    }
+    @keyframes pSway {
+      0% { transform: rotate(-5deg); }
+      100% { transform: rotate(5deg); }
+    }
+    @keyframes waveDrift {
+      0% { transform: translateX(-8px); opacity: 0.4; }
+      100% { transform: translateX(8px); opacity: 0.8; }
+    }
+  </style>
+
+  <!-- Night Water Base -->
+  <rect width="400" height="400" rx="20" fill="url(#gardenWater)"/>
+
+  <!-- Moon Glow & Water Reflections -->
+  <ellipse cx="200" cy="50" rx="180" ry="45" fill="#FFEBAA" opacity="0.12" filter="url(#subtleGlow)"/>
+
+  <!-- Water Wave Ripple Currents -->
+  <g class="water-wave" stroke="#00D9C6" stroke-width="0.8" fill="none" opacity="0.4">
+    <path d="M 20 180 Q 70 175 120 180 T 220 180 T 320 180 T 380 180"/>
+    <path d="M 40 210 Q 90 205 140 210 T 240 210 T 340 210"/>
+    <path d="M 10 320 Q 80 315 150 320 T 290 320 T 390 320" stroke="#173A78" stroke-width="1.2"/>
+    <path d="M 30 350 Q 110 345 190 350 T 350 350" stroke="#00D9C6" stroke-width="0.6"/>
+  </g>
+
+  <!-- Ripples expanding beneath Central Lotus -->
+  <circle class="ripple1" cx="200" cy="260" r="15" fill="none" stroke="#00D9C6"/>
+  <circle class="ripple2" cx="200" cy="260" r="15" fill="none" stroke="#F5C76B"/>
+
+  <!-- Lily Pads / Lotus Leaves -->
+  <!-- Center Large Lily Pad -->
+  <g transform="translate(200, 265)">
+    <ellipse cx="0" cy="0" rx="65" ry="18" fill="#09382B" stroke="#00D9C6" stroke-width="0.6"/>
+    <path d="M 0 0 L 35 -14" stroke="#0F5A47" stroke-width="1.2"/>
+    <path d="M 0 0 L -40 -12" stroke="#0F5A47" stroke-width="1.2"/>
+    <path d="M 0 0 L 0 16" stroke="#0F5A47" stroke-width="1.2"/>
+  </g>
+
+  <!-- Left Lily Pad -->
+  <g transform="translate(90, 285)">
+    <ellipse cx="0" cy="0" rx="46" ry="14" fill="#072C22" stroke="#0F5A47" stroke-width="0.6"/>
+    <path d="M 0 0 L -25 -10" stroke="#0D4536" stroke-width="1"/>
+  </g>
+
+  <!-- Right Lily Pad -->
+  <g transform="translate(310, 280)">
+    <ellipse cx="0" cy="0" rx="48" ry="14" fill="#072C22" stroke="#0F5A47" stroke-width="0.6"/>
+    <path d="M 0 0 L 30 -8" stroke="#0D4536" stroke-width="1"/>
+  </g>
+
+  <!-- ================= LOTUS FLOWERS ================= -->
+
+  <!-- Left Lotus Flower (Blossoming) -->
+  <g class="lotus-bloom-left" transform="translate(90, 275)" filter="url(#lotusGlow)">
+    <!-- Outer Petals -->
+    <path d="M 0 0 C -22 -6 -28 -28 -14 -38 C -4 -28 0 -10 0 0 Z" fill="url(#petalPink)"/>
+    <path d="M 0 0 C 22 -6 28 -28 14 -38 C 4 -28 0 -10 0 0 Z" fill="url(#petalPink)"/>
+    <!-- Middle Petals -->
+    <path d="M 0 0 C -15 -10 -18 -38 0 -48 C 4 -32 0 -10 0 0 Z" fill="url(#centerLotusPetal)"/>
+    <path d="M 0 0 C 15 -10 18 -38 0 -48 C -4 -32 0 -10 0 0 Z" fill="url(#centerLotusPetal)"/>
+    <!-- Core Anther -->
+    <circle cx="0" cy="-14" r="3.5" fill="#F5C76B"/>
+  </g>
+
+  <!-- Right Lotus Flower (Blossoming) -->
+  <g class="lotus-bloom-right" transform="translate(310, 270)" filter="url(#lotusGlow)">
+    <!-- Outer Petals -->
+    <path d="M 0 0 C -24 -8 -30 -30 -16 -40 C -5 -30 0 -12 0 0 Z" fill="url(#petalPink)"/>
+    <path d="M 0 0 C 24 -8 30 -30 16 -40 C 5 -30 0 -12 0 0 Z" fill="url(#petalPink)"/>
+    <!-- Middle Petals -->
+    <path d="M 0 0 C -16 -12 -20 -40 0 -50 C 4 -34 0 -12 0 0 Z" fill="url(#centerLotusPetal)"/>
+    <path d="M 0 0 C 16 -12 20 -40 0 -50 C -4 -34 0 -12 0 0 Z" fill="url(#centerLotusPetal)"/>
+    <!-- Core Anther -->
+    <circle cx="0" cy="-15" r="3.5" fill="#F5C76B"/>
+  </g>
+
+  <!-- Center Sacred Sahasrara Lotus (Full Grand Bloom) -->
+  <g class="lotus-bloom-main" transform="translate(200, 255)" filter="url(#lotusGlow)">
+    <!-- Base Glow -->
+    <circle cx="0" cy="-20" r="32" fill="#FFAACD" opacity="0.25"/>
+
+    <!-- Wide Bottom Petals -->
+    <path d="M 0 0 C -42 -5 -52 -28 -34 -45 C -18 -32 0 -15 0 0 Z" fill="url(#petalPink)"/>
+    <path d="M 0 0 C 42 -5 52 -28 34 -45 C 18 -32 0 -15 0 0 Z" fill="url(#petalPink)"/>
+    
+    <!-- Mid-layer Petals -->
+    <path d="M 0 0 C -30 -15 -38 -50 -18 -64 C -6 -45 0 -20 0 0 Z" fill="url(#petalPink)"/>
+    <path d="M 0 0 C 30 -15 38 -50 18 -64 C 6 -45 0 -20 0 0 Z" fill="url(#petalPink)"/>
+
+    <!-- Central Majestic Upright Petals -->
+    <path d="M 0 0 C -18 -20 -18 -68 0 -80 C 4 -50 0 -20 0 0 Z" fill="url(#centerLotusPetal)"/>
+    <path d="M 0 0 C 18 -20 18 -68 0 -80 C -4 -50 0 -20 0 0 Z" fill="url(#centerLotusPetal)"/>
+
+    <!-- Golden Sacred Pollen Core (Karnika) -->
+    <circle cx="0" cy="-28" r="7" fill="url(#lotusGold)"/>
+    <circle cx="0" cy="-28" r="4" fill="#FFE89E"/>
+    <!-- Pollen Radiance Dots -->
+    <circle cx="-5" cy="-34" r="1.5" fill="#FFF2BD"/>
+    <circle cx="5" cy="-34" r="1.5" fill="#FFF2BD"/>
+    <circle cx="0" cy="-37" r="1.5" fill="#FFF2BD"/>
+  </g>
+
+  <!-- ================= SWAYING PEACOCK FEATHER ORNAMENT AT TOP ================= -->
+  <g class="peacock-sway" transform="translate(200, 45)" filter="url(#lotusGlow)">
+    <!-- Feather Stem -->
+    <path d="M 0 0 Q 8 30 14 70" stroke="url(#lotusGold)" stroke-width="2.5" fill="none"/>
+    <!-- Peacock Eye Plume -->
+    <ellipse cx="2" cy="18" rx="18" ry="24" fill="#0a5948"/>
+    <ellipse cx="2" cy="18" rx="13" ry="18" fill="#00D9C6"/>
+    <ellipse cx="2" cy="18" rx="8" ry="12" fill="#173A78"/>
+    <circle cx="2" cy="18" r="4.5" fill="url(#lotusGold)"/>
+    <!-- Fine Fluff Threads -->
+    <path d="M -14 10 Q -24 6 -28 14" stroke="#00D9C6" stroke-width="1" fill="none"/>
+    <path d="M 18 10 Q 28 6 32 14" stroke="#00D9C6" stroke-width="1" fill="none"/>
+    <path d="M -12 25 Q -22 28 -24 38" stroke="#F5C76B" stroke-width="0.8" fill="none"/>
+    <path d="M 16 25 Q 26 28 28 38" stroke="#F5C76B" stroke-width="0.8" fill="none"/>
+  </g>
+
+  <!-- ================= GLOWING FIREFLIES & GOLD PARTICLES ================= -->
+  <g fill="#FFE89E" filter="url(#lotusGlow)">
+    <g class="firefly1">
+      <circle cx="120" cy="200" r="2.5"/>
+      <circle cx="120" cy="200" r="5" fill="#00D9C6" opacity="0.3"/>
+    </g>
+    <g class="firefly2">
+      <circle cx="280" cy="190" r="2.5"/>
+      <circle cx="280" cy="190" r="6" fill="#F5C76B" opacity="0.35"/>
+    </g>
+    <g class="firefly3">
+      <circle cx="180" cy="140" r="2"/>
+      <circle cx="180" cy="140" r="4" fill="#F5A3C7" opacity="0.3"/>
+    </g>
+    <g class="firefly4">
+      <circle cx="240" cy="150" r="2.2"/>
+    </g>
+    <circle cx="65" cy="120" r="1.4" opacity="0.7"/>
+    <circle cx="340" cy="130" r="1.5" opacity="0.7"/>
+  </g>
+
+  <!-- Section Title at the Bottom -->
+  <text x="200" y="382" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="url(#lotusGold)" filter="url(#lotusGlow)">
+    ॥ वृन्दावन कमलोद्यानम् ॥
+  </text>
+
+  <!-- Ornamental Golden Border -->
+  <rect x="6" y="6" width="388" height="388" rx="16" fill="none" stroke="url(#lotusGold)" stroke-width="1.8"/>
+  <rect x="11" y="11" width="378" height="378" rx="12" fill="none" stroke="#00D9C6" stroke-width="0.8" opacity="0.45"/>
+
+  <!-- Corner Lotus Dots -->
+  <g fill="#F5C76B">
+    <circle cx="16" cy="16" r="3"/>
+    <circle cx="384" cy="16" r="3"/>
+    <circle cx="16" cy="384" r="3"/>
+    <circle cx="384" cy="384" r="3"/>
+  </g>
+</svg>

@@ -1,0 +1,255 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360">
+  <defs>
+    <!-- Sky Gradient -->
+    <linearGradient id="footerSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#05091C"/>
+      <stop offset="45%" stop-color="#0A1136"/>
+      <stop offset="70%" stop-color="#0e184a"/>
+      <stop offset="100%" stop-color="#07102e"/>
+    </linearGradient>
+
+    <!-- Yamuna River Gradient -->
+    <linearGradient id="footerWater" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0e2960"/>
+      <stop offset="50%" stop-color="#091b40"/>
+      <stop offset="100%" stop-color="#040b1c"/>
+    </linearGradient>
+
+    <!-- Sacred Gold Gradient -->
+    <linearGradient id="footerGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E5A838"/>
+      <stop offset="35%" stop-color="#FFF2BF"/>
+      <stop offset="50%" stop-color="#F5C76B"/>
+      <stop offset="65%" stop-color="#FFF2BF"/>
+      <stop offset="100%" stop-color="#E5A838"/>
+    </linearGradient>
+
+    <radialGradient id="footerMoonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFBE8" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#FFEBB3" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#05091C" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="divineAuraFooter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFEAA8" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#A78BFA" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#05091C" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="fGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="moonSoftBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .f-star { animation: fStarTwinkle 3s ease-in-out infinite alternate; }
+    .fs-1 { animation-delay: 0.8s; }
+    .fs-2 { animation-delay: 1.6s; }
+    .fs-3 { animation-delay: 2.4s; }
+
+    .f-feather-l { animation: fSwayL 5s ease-in-out infinite alternate; transform-origin: 100px 180px; }
+    .f-feather-r { animation: fSwayR 5s ease-in-out infinite alternate; transform-origin: 1100px 180px; }
+
+    .water-flow { animation: fWaterShift 7s ease-in-out infinite alternate; }
+    .lotus-pulse { animation: fLotusGlow 4s ease-in-out infinite alternate; }
+    .f-particle { animation: fParticleFloat 8s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    .fp1 { animation-delay: 2s; }
+    .fp2 { animation-delay: 4.5s; }
+
+    @keyframes fStarTwinkle {
+      0% { opacity: 0.2; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1.2); }
+    }
+    @keyframes fSwayL {
+      0% { transform: rotate(-5deg); }
+      100% { transform: rotate(5deg); }
+    }
+    @keyframes fSwayR {
+      0% { transform: rotate(5deg); }
+      100% { transform: rotate(-5deg); }
+    }
+    @keyframes fWaterShift {
+      0% { transform: translateX(-15px); }
+      100% { transform: translateX(15px); }
+    }
+    @keyframes fLotusGlow {
+      0% { transform: scale(0.95); filter: drop-shadow(0 0 4px #F5A3C7); }
+      100% { transform: scale(1.05); filter: drop-shadow(0 0 10px #F5C76B); }
+    }
+    @keyframes fParticleFloat {
+      0% { transform: translateY(20px); opacity: 0; }
+      20% { opacity: 0.9; }
+      80% { opacity: 0.9; }
+      100% { transform: translateY(-70px); opacity: 0; }
+    }
+  </style>
+
+  <!-- Sky Canvas -->
+  <rect width="1200" height="360" rx="20" fill="url(#footerSky)"/>
+
+  <!-- Starry Sky -->
+  <g fill="#FFFDF0">
+    <circle class="f-star" cx="120" cy="40" r="1.5"/>
+    <circle class="f-star fs-1" cx="240" cy="65" r="1.8"/>
+    <circle class="f-star fs-2" cx="380" cy="35" r="1.2"/>
+    <circle class="f-star fs-3" cx="520" cy="55" r="2"/>
+    <circle class="f-star" cx="680" cy="30" r="1.6"/>
+    <circle class="f-star fs-1" cx="820" cy="60" r="2.2"/>
+    <circle class="f-star fs-2" cx="960" cy="40" r="1.4"/>
+    <circle class="f-star fs-3" cx="1080" cy="70" r="1.7"/>
+  </g>
+
+  <!-- Radiant Full Moon at Top Center -->
+  <circle cx="600" cy="75" r="50" fill="url(#footerMoonGlow)" filter="url(#moonSoftBlur)"/>
+  <circle cx="600" cy="75" r="28" fill="#FFFBE8"/>
+
+  <!-- Divine Halo Behind Radha Krishna -->
+  <ellipse cx="600" cy="140" rx="130" ry="80" fill="url(#divineAuraFooter)"/>
+
+  <!-- Yamuna River Base -->
+  <path d="M 0 240 Q 300 230 600 238 T 1200 240 L 1200 360 L 0 360 Z" fill="url(#footerWater)"/>
+  
+  <!-- Water Waves / Reflections -->
+  <g class="water-flow" stroke="#00D9C6" stroke-width="0.8" fill="none" opacity="0.35">
+    <path d="M 100 260 Q 350 250 600 258 T 1100 260"/>
+    <path d="M 50 285 Q 300 278 600 282 T 1150 285" stroke="#FFEAA8" stroke-width="0.6"/>
+    <path d="M 150 310 Q 400 305 600 308 T 1050 310"/>
+  </g>
+
+  <!-- Distant Temple Shikhara on Left Horizon -->
+  <g fill="#091338" opacity="0.8">
+    <path d="M 280 238 L 295 180 L 310 238 Z"/>
+    <path d="M 295 180 L 295 170" stroke="#F5C76B" stroke-width="1.5"/>
+    <circle cx="295" cy="168" r="2" fill="#F5C76B"/>
+  </g>
+
+  <!-- Distant Temple Shikhara on Right Horizon -->
+  <g fill="#091338" opacity="0.8">
+    <path d="M 890 238 L 905 180 L 920 238 Z"/>
+    <path d="M 905 180 L 905 170" stroke="#F5C76B" stroke-width="1.5"/>
+    <circle cx="905" cy="168" r="2" fill="#F5C76B"/>
+  </g>
+
+  <!-- ================= RADHA KRISHNA DEVOTIONAL SILHOUETTES (CENTER) ================= -->
+  <g transform="translate(600, 150)">
+    <!-- KRISHNA (Left of center) -->
+    <g transform="translate(-25, 0)">
+      <!-- Krishna Halo -->
+      <circle cx="0" cy="-35" r="18" fill="#173A78" opacity="0.6"/>
+      <circle cx="0" cy="-35" r="17" fill="none" stroke="#00D9C6" stroke-width="0.8" opacity="0.7"/>
+      
+      <!-- Head & Peacock Feather -->
+      <circle cx="0" cy="-35" r="9" fill="#2563EB"/>
+      <path d="M 0 -44 Q -4 -54 2 -60 Q 6 -52 0 -44 Z" fill="#00D9C6"/>
+      <circle cx="1" cy="-52" r="1.5" fill="#F5C76B"/>
+
+      <!-- Body / Dhoti -->
+      <path d="M -8 -25 L 8 -25 L 12 25 L -12 25 Z" fill="#1E3A8A"/>
+      <path d="M -12 25 L -15 70 L 15 70 L 12 25 Z" fill="#172554"/>
+      <!-- Pitambara Gold Stripe -->
+      <path d="M 0 25 L 0 70" stroke="#F5C76B" stroke-width="1.5"/>
+
+      <!-- Flute (Bansuri) -->
+      <line x1="-30" y1="-12" x2="25" y2="-18" stroke="#F5C76B" stroke-width="2.5" stroke-linecap="round" filter="url(#fGlow)"/>
+    </g>
+
+    <!-- RADHA (Right of center) -->
+    <g transform="translate(25, 0)">
+      <!-- Radha Halo -->
+      <circle cx="0" cy="-32" r="17" fill="#BE185D" opacity="0.4"/>
+      <circle cx="0" cy="-32" r="16" fill="none" stroke="#F5A3C7" stroke-width="0.8" opacity="0.6"/>
+
+      <!-- Head & Veil -->
+      <circle cx="0" cy="-32" r="8.5" fill="#F472B6"/>
+      <!-- Flowing Veil (Odhani) -->
+      <path d="M -4 -40 Q 6 -42 12 -38 Q 22 0 16 68 L 6 68 Q 12 0 4 -32 Z" fill="#9D174D" opacity="0.9"/>
+      <path d="M -4 -40 Q 6 -42 12 -38 Q 22 0 16 68" stroke="#F5C76B" stroke-width="1" fill="none"/>
+
+      <!-- Bodice & Lehengha -->
+      <path d="M -8 -23 L 8 -23 L 10 25 L -10 25 Z" fill="#BE185D"/>
+      <path d="M -10 25 Q -22 65 -18 70 Q 0 74 18 70 Q 22 65 10 25 Z" fill="#831843"/>
+      <path d="M -18 68 Q 0 72 18 68" stroke="#F5C76B" stroke-width="1.8" fill="none"/>
+    </g>
+  </g>
+
+  <!-- ================= FLOATING LOTUS BLOSSOMS ON RIVER ================= -->
+  <!-- Left Lotus -->
+  <g class="lotus-pulse" transform="translate(420, 260)" filter="url(#fGlow)">
+    <ellipse cx="0" cy="4" rx="14" ry="4" fill="#0A3D2A"/>
+    <path d="M -10 4 C -12 -5 -4 -12 0 -14 C 4 -12 12 -5 10 4 Z" fill="#F5A3C7"/>
+    <circle cx="0" cy="1" r="2" fill="#F5C76B"/>
+  </g>
+
+  <!-- Right Lotus -->
+  <g class="lotus-pulse" transform="translate(780, 260)" filter="url(#fGlow)">
+    <ellipse cx="0" cy="4" rx="14" ry="4" fill="#0A3D2A"/>
+    <path d="M -10 4 C -12 -5 -4 -12 0 -14 C 4 -12 12 -5 10 4 Z" fill="#F5A3C7"/>
+    <circle cx="0" cy="1" r="2" fill="#F5C76B"/>
+  </g>
+
+  <!-- ================= SIDE PEACOCK FEATHERS ================= -->
+  <!-- Left Feather -->
+  <g class="f-feather-l" transform="translate(90, 160)" filter="url(#fGlow)">
+    <path d="M -30 60 Q 10 0 50 -40" stroke="url(#footerGold)" stroke-width="2.5" fill="none"/>
+    <ellipse cx="28" cy="-22" rx="20" ry="30" fill="#00D9C6" transform="rotate(30 28 -22)"/>
+    <ellipse cx="28" cy="-22" rx="13" ry="20" fill="#173A78" transform="rotate(30 28 -22)"/>
+    <circle cx="28" cy="-22" r="5" fill="#F5C76B"/>
+  </g>
+
+  <!-- Right Feather -->
+  <g class="f-feather-r" transform="translate(1110, 160)" filter="url(#fGlow)">
+    <path d="M 30 60 Q -10 0 -50 -40" stroke="url(#footerGold)" stroke-width="2.5" fill="none"/>
+    <ellipse cx="-28" cy="-22" rx="20" ry="30" fill="#00D9C6" transform="rotate(-30 -28 -22)"/>
+    <ellipse cx="-28" cy="-22" rx="13" ry="20" fill="#173A78" transform="rotate(-30 -28 -22)"/>
+    <circle cx="-28" cy="-22" r="5" fill="#F5C76B"/>
+  </g>
+
+  <!-- ================= FLOATING GOLDEN PARTICLES ================= -->
+  <g fill="#F5C76B" filter="url(#fGlow)">
+    <circle class="f-particle" cx="520" cy="220" r="2"/>
+    <circle class="f-particle fp1" cx="680" cy="210" r="2.2"/>
+    <circle class="f-particle fp2" cx="590" cy="230" r="1.8"/>
+    <circle class="f-particle fp1" cx="610" cy="190" r="2"/>
+  </g>
+
+  <!-- ================= FOOTER TEXT CONTENT ================= -->
+  <g text-anchor="middle" filter="url(#fGlow)">
+    <!-- Radhe Radhe Call -->
+    <text x="600" y="278" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="url(#footerGold)" letter-spacing="3">
+      ॥ राधे राधे ॥
+    </text>
+
+    <!-- Core Motto -->
+    <text x="600" y="306" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="600" fill="#00D9C6" letter-spacing="1.5">
+      Keep Learning • Keep Building • Keep Innovating
+    </text>
+
+    <!-- Spiritual & Devotional Line -->
+    <text x="600" y="330" font-family="Georgia, serif" font-size="14" font-style="italic" fill="#A78BFA" letter-spacing="1">
+      "With Devotion, Discipline &amp; Curiosity — Made with Dedication by Padma Dhanush"
+    </text>
+  </g>
+
+  <!-- Outer Sacred Border Frame -->
+  <rect x="8" y="8" width="1184" height="344" rx="16" fill="none" stroke="url(#footerGold)" stroke-width="1.8"/>
+  <rect x="13" y="13" width="1174" height="334" rx="12" fill="none" stroke="#00D9C6" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Corner Lotus Dots -->
+  <circle cx="18" cy="18" r="3" fill="#F5C76B"/>
+  <circle cx="1182" cy="18" r="3" fill="#F5C76B"/>
+  <circle cx="18" cy="342" r="3" fill="#F5C76B"/>
+  <circle cx="1182" cy="342" r="3" fill="#F5C76B"/>
+</svg>
