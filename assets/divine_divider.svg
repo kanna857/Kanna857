@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="85" viewBox="0 0 1000 85">
-<defs><linearGradient id="gold"><stop stop-color="#7043c8"/><stop offset=".5" stop-color="#f9d883"/><stop offset="1" stop-color="#7043c8"/></linearGradient></defs>
-<rect width="1000" height="85" fill="#0b0921" rx="20"/>
-<path d="M20 42 H350 M650 42 H980" stroke="url(#gold)" stroke-width="2" stroke-dasharray="12 8"><animate attributeName="stroke-dashoffset" from="0" to="-40" dur="3s" repeatCount="indefinite"/></path>
-<text x="500" y="54" text-anchor="middle" fill="#f9d883" font-family="Georgia,serif" font-size="34">✦  RADHA  ♡  KRISHNA  ✦</text>
-<circle cx="500" cy="42" r="38" fill="none" stroke="#ab75ff" opacity=".3"><animate attributeName="r" values="32;40;32" dur="3s" repeatCount="indefinite"/></circle>
-</svg>
