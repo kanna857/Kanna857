@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/radha_krishna_animated.gif" width="100%" alt="Animated Radha Krishna moonlit banner with floating petals" />
+<img src="./assets/premium_profile_top.jpg" width="100%" alt="Padma Dhanush Radha Krishna and AI themed profile cover" />
 
 <img src="./assets/animated_heading.svg" width="100%" alt="Animated golden heading and glowing peacock feathers" />
 
@@ -8,7 +8,9 @@
 
 **🪷 AI/ML Developer · Research Enthusiast · Open Source Builder 🪷**
 
-<img src="./assets/radha_krishna_art.png" width="100%" alt="Radha and Krishna illustrated scenes" />
+<h3>🌸 Divine Motion — Radha Krishna 🌸</h3>
+
+<img src="./assets/radha_krishna_animated.gif" width="100%" alt="Animated Radha Krishna dancing in moonlit Vrindavan" />
 
 </div>
 
