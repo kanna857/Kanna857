@@ -8,25 +8,7 @@
 
 **🪷 AI/ML Developer · Research Enthusiast · Open Source Builder 🪷**
 
-### 🪈 A Melody from Vrindavan
-
-<a href="https://raw.githubusercontent.com/kanna857/kanna857/main/assets/krishna-flute-original.mp3" title="Open original Krishna flute melody (press play in your browser)">
-  <img src="./assets/flute-music-button.svg" width="800" alt="Animated glowing golden flute button — click to play original Krishna flute melody" />
-</a>
-
-<sub>🎵 Click the glowing flute, then press Play in your browser. Original instrumental audio; no autoplay.</sub>
-
 <img src="./assets/radha_krishna_art.png" width="100%" alt="Radha and Krishna illustrated scenes" />
-
-</div>
-
-## 🪈 Divine Flute Music — Listen to Vrindavan
-
-<div align="center">
-
-[![Listen to original Krishna flute melody](./assets/flute-music-button.svg)](https://kanna857.github.io/kanna857/)
-
-*Tap the glowing flute button to open my matching Radha–Krishna AI portfolio and play an original instrumental melody.*
 
 </div>
 
@@ -38,7 +20,7 @@
 - 🛠️ Building applied AI systems and open-source tools
 - 🎯 Goal: **Machine Learning Engineer**
 
-## 🪈 Tech Stack
+## 💻 Tech Stack
 
 <div align="center">
 
@@ -80,9 +62,6 @@
 </div>
 
 ## 🌺 Connect
-
-[🪷 Explore the interactive Radha–Krishna portfolio](https://kanna857.github.io/kanna857/)
-
 
 <div align="center">
 
